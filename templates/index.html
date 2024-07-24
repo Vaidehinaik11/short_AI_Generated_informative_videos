@@ -1,0 +1,45 @@
+<!DOCTYPE html
+<html>
+    <head>
+        <title>
+            Generate Videos
+        </title>
+        <style>
+            body {
+                font-family: Arial;
+                padding: 20px;
+                background-color: red;
+            }
+            .container {
+                max-width: 600px;
+                padding: 20px;
+            }
+            h1{
+                text-align: center;
+            }
+            input[type = "text"]{
+                padding: 10px;
+            }
+            button{
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Informative Video</h1>
+            <form action="/" method="post">
+                <input type="text" name="word" placeholder="Enter a word" required>
+                <button type="submit">Generate</button>
+            </form>
+            {% if video_url%}
+            <div class = "video">
+                <video width = "50%" controls>
+                    <source src = "{{ video_url}}" type = "video/mp4">
+                    Done-------------------
+                </video>
+            </div>
+            {% endif %}
+        </div>
+    </body>
+</html>
